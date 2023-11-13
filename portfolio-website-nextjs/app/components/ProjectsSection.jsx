@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Project 1 description",
+    description: "Dies ist die aktuelle Website, auf der du dich befindest. Sie wurde mit ReactJS und Next.js entwickelt. Diese Technologien ermöglichen es, eine hochmoderne und reaktionsschnelle Website zu erstellen. Darüber hinaus wurden verschiedene Animationsbibliotheken in die Website integriert, um visuelle Effekte und Benutzerinteraktionen zu verbessern. Dies trägt dazu bei, die Benutzererfahrung auf dieser Plattform zu optimieren und sie ansprechender zu gestalten.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -16,17 +16,17 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "HRV-Analyse App",
+    description: "Die App wurde im Rahmen meiner Bachelorarbeit entwickelt und nutzt einen Tech-Stack, der auf Dart und Flutter basiert, um plattformübergreifende mobile Anwendungen zu erstellen. Ihre Hauptfunktion besteht darin, die Herzfrequenzvariabilität (HRV) durch die Analyse von Kamerabildern zu messen. Kontinuierlich werden Fingerbewegungen vor der Kamera erfasst, die Rotfarbwerte der Bilder analysiert, Herzschläge erkannt und die HRV berechnet. Diese App stellt ein Ergebnis meiner Bachelorarbeit dar und ermöglicht Benutzern, ihre Herzgesundheit in Echtzeit zu überwachen.",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Corona vs. Verkehr in Mannheim",
+    description: "Das Projekt Corona vs. Verkehr in Mannheim habe ich zusammen mit einem Kommilitonen im Zuge des Moduls Grundlagen der Datenvisualisierung implementiert. Dabei nutzten wir eine Kombination aus JavaScript, HTML und CSS zur Erstellung einer interaktiven Webanwendung. Die Verkehrsdaten wurden vom MVV im CSV-Format auf GitHub bereitgestellt. Für die Datenvisualisierung kam die JavaScript-Bibliothek Chart.js zum Einsatz, um Diagramme zu generieren, und Leaflet.js für interaktive Kartendarstellungen. Die Webanwendung ermöglichte es, die Auswirkungen der COVID-19-Pandemie auf das Verkehrsaufkommen in Mannheim visuell zu analysieren und zu erforschen.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -34,8 +34,8 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
+    title: "VidaFun",
+    description: "Im Zuge des Projektsemesters haben wir als Team von fünf Personen eine App entwickelt. Diese App basiert auf React Native, einem plattformübergreifenden Framework für mobile Anwendungen. Sie ermöglicht es Patienten im Rahmen eines Gamification-Konzepts, wichtige Gesundheitsdaten einzutragen, gezielte Übungen auszuführen und Benachrichtigungen zu erhalten. Zur Verwaltung der Daten haben wir MySQL als Datenbank verwendet und PHP für die serverseitige Logik integriert. Diese Technologiestack-Kombination ermöglichte uns, eine umfassende und benutzerfreundliche Gesundheitsanwendung zu erstellen.",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "/",
@@ -43,10 +43,10 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "My Finance Planner",
+    description: "My Finance Planner ist eine effektive Finanzmanagement-App, die Ihre Finanzen verwaltet und Einsparungsmöglichkeiten bietet. Sie bietet eine benutzerfreundliche Oberfläche und hilfreiche Funktionen zur Erreichung Ihrer finanziellen Ziele. Anzeigen von Kontoständen, Einkommen und Ausgaben in einer klaren Übersicht, Budgets für verschiedene Kategorien festlegen und Spartipps erhalten. Die App ermöglicht das Setzen persönlicher finanzieller Ziele und die Verfolgung des Fortschritts. Entwickelt mit Flutter und Dart, nutzt sie das Provider-System zur Zustandsverwaltung.",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -82,7 +82,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
+        Meine Projekte
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag

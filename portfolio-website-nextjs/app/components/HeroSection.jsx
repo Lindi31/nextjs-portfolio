@@ -32,7 +32,7 @@ const HeroSection = () => {
                         repeat={Infinity}
                     />
                 </h1>
-                <p className="text-[#ADB7BE] text-lg lg:text-xl mb-6"> Text</p>
+                <p className="text-[#ADB7BE] text-lg lg:text-xl mb-6"> Du bist auf meiner Website gelandet, wo Code und Kreativität sich treffen. Bereit, mehr über mich zu erfahren? Dann scroll runter.</p>
                 <div>
                     <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 bg-white hover:bg-slate-200 text-white">Hire Me</button>
                     <button className="px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white  mt-3">

@@ -1,7 +1,8 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { AnimatePresence, motion } from "framer-motion";
 
 const TAB_DATA = [
   {
@@ -34,8 +35,11 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Tableau</li>
+        <li>Microsoft Office</li>
+        <li>Slack</li>
+        <li>Figma</li>
+        <li>IntelliJ IDEA</li>
       </ul>
     ),
   },
@@ -43,54 +47,53 @@ const TAB_DATA = [
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
 
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
+  const handleTabChange = (newTab) => {
+    setTab(newTab);
+  };
+
+  const tabVariants = {
+    hidden: { opacity: 0, x: -40, transition: { duration: 0.2 } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    exit: { opacity: 0, x: 100, transition: { duration: 0.2 } },
   };
 
   return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={600} height={600} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+    <section className="bg-[#181818] rounded border-1 border-gray-200 text-white py-8" id="about">
+      <div className="container mx-auto px-4 md:grid md:grid-cols-2 gap-8 items-center">
+        <div className="mb-6 md:mb-0 place-self-center">
+          <Image src="/images/about-image.png" layout="responsive" width={600} height={600} />
+        </div>
+        <div>
+          <h2 className="text-4xl font-bold mb-4">Über Mich</h2>
+          <p className="text-base lg:text-lg mb-8">
+          Ich bin ein Softwareentwickler, der keine Grenzen kennt – von knackigen Frontends bis zu robusten Backends, von Desktop-Apps bis zu mobilen Anwendungen. Mein Tech-Stack umfasst Java, Dart/Flutter für mobile Apps, JavaScript mit Node.js für skalierbare Web-Apps und React für dynamische UIs. Mit Python erwecke ich Backend-Prozesse zum Leben, SQL für Datenmanipulation ist unerlässlich. HTML und CSS sorgen für das visuelle Feintuning, während Git die Teamarbeit und den Code-Fluss sichert. Schnelles Lernen und Skill-Verfeinerung sind mein tägliches Programm, um innovative Softwarelösungen zu liefern.
+          
           </p>
-          <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Ausbildung{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Software{" "}
-            </TabButton>
+          <div className="flex flex-wrap border-b border-gray-700">
+            {TAB_DATA.map((tabData) => (
+              <TabButton
+                key={tabData.id}
+                selectTab={() => handleTabChange(tabData.id)}
+                active={tab === tabData.id}
+              >
+                {tabData.title}
+              </TabButton>
+            ))}
           </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
-          </div>
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={tab}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={tabVariants}
+              className="tab-content mt-4"
+              style={{ minHeight: '10rem' }}
+            >
+              {TAB_DATA.find((t) => t.id === tab).content}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
