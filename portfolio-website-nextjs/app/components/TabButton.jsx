@@ -2,24 +2,26 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const variants = {
-  default: { width: 0 },
-  active: { width: "calc(100% - 0.75rem)" },
+  default: { scaleX: 0 },
+  active: { scaleX: 1 },
 };
 
 const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
-
   return (
-    <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
+    <div className="inline-block relative mr-3">
+      <button onClick={selectTab} className={`font-semibold py-2 px-4 ${active ? "text-white" : "text-gray-400 hover:text-white"}`}>
         {children}
-      </p>
-      <motion.div
-        animate={active ? "active" : "default"}
-        variants={variants}
-        className="h-1 bg-primary-500 mt-2 mr-3"
-      ></motion.div>
-    </button>
+      </button>
+      {active && (
+        <motion.div
+          initial={false}
+          animate="active"
+          exit="default"
+          variants={variants}
+          className="absolute bottom-0 left-0 w-full h-1 bg-blue-500 origin-left"
+        />
+      )}
+    </div>
   );
 };
 
