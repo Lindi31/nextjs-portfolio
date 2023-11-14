@@ -8,11 +8,11 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Dies ist die aktuelle Website, auf der du dich befindest. Sie wurde mit ReactJS und Next.js entwickelt. Diese Technologien ermöglichen es, eine hochmoderne und reaktionsschnelle Website zu erstellen. Darüber hinaus wurden verschiedene Animationsbibliotheken in die Website integriert, um visuelle Effekte und Benutzerinteraktionen zu verbessern. Dies trägt dazu bei, die Benutzererfahrung auf dieser Plattform zu optimieren und sie ansprechender zu gestalten.",
+    description: "Dies ist die aktuelle Website, auf der du dich befindest. Sie wurde mit React.JS und Next.JS entwickelt. Diese Technologien ermöglichen es, eine hochmoderne und reaktionsschnelle Website zu erstellen. Darüber hinaus wurden verschiedene Animationsbibliotheken in die Website integriert, um visuelle Effekte und Benutzerinteraktionen zu verbessern. Dies trägt dazu bei, die Benutzererfahrung auf dieser Plattform zu optimieren und sie ansprechender zu gestalten.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/images/projects/1.png",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projectsData = [
     image: "/images/projects/2.png",
     tag: ["All", "Mobile"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/images/projects/2.png",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const projectsData = [
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/images/projects/3.png",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const projectsData = [
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/images/projects/4.png",
   },
   {
     id: 5,
@@ -48,16 +48,16 @@ const projectsData = [
     image: "/images/projects/5.png",
     tag: ["All", "Mobile"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/images/projects/5.png",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "GBS - mobile App",
+    description: "In der von mir entwickelten Beauty-App, die mit Flutter und Dart erstellt wird und Firebase als Backend nutzt, wird die Kosmetikerin in der Lage sein, personalisierte Schönheitstipps zu veröffentlichen, Termine zu verwalten und einen eigenen Blog zu führen. Kunden werden bequem über die App Termine buchen können und Zugang zu einem Blog erhalten, der mit den neuesten Trends und Anleitungen im Beauty-Bereich aktualisiert wird. Diese App wird eine nahtlose und interaktive Benutzererfahrung bieten, unterstützt durch die leistungsstarken Echtzeit-Datenverarbeitungsfunktionen von Firebase.",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/images/projects/6.png",
   },
 ];
 
