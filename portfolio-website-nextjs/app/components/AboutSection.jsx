@@ -65,7 +65,7 @@ const AboutSection = () => {
           <Image src="/images/about-image.png" layout="responsive" width={600} height={600} />
         </div>
         <div>
-          <h2 className="text-4xl font-bold mb-4">Über Mich</h2>
+          <h2 className="text-4xl font-bold mb-4">Über Mich</h2> 
           <p className="text-base lg:text-lg mb-8">
           Ich bin ein Softwareentwickler, der keine Grenzen kennt – von knackigen Frontends bis zu robusten Backends, von Desktop-Apps bis zu mobilen Anwendungen. Mein Tech-Stack umfasst Java, Dart/Flutter für mobile Apps, JavaScript mit Node.js für skalierbare Web-Apps und React für dynamische UIs. Mit Python erwecke ich Backend-Prozesse zum Leben, SQL für Datenmanipulation ist unerlässlich. HTML und CSS sorgen für das visuelle Feintuning, während Git die Teamarbeit und den Code-Fluss sichert. Schnelles Lernen und Skill-Verfeinerung sind mein tägliches Programm, um innovative Softwarelösungen zu liefern.
           
