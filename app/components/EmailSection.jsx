@@ -19,25 +19,38 @@ const EmailSection = () => {
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
-
+  
     // Form the request for sending data to the server.
     const options = {
-      // The method is POST because we are sending data.
       method: "POST",
-      // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
       },
-      // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+  
+    try {
+      const response = await fetch(endpoint, options);
+  
+      // Only attempt to parse the response as JSON if the content type is correct
+      if (response.headers.get('Content-Type')?.includes('application/json')) {
+        const resData = await response.json();
+        
+        if (response.ok) {
+          console.log("Message sent:", resData);
+          setEmailSubmitted(true);
+        } else {
+          // Handle server-side errors (resData should contain the error message)
+          console.error("Server error:", resData);
+        }
+      } else {
+        // If the response isn't JSON, log the text for debugging
+        const text = await response.text();
+        console.error("Non-JSON response received:", text);
+      }
+    } catch (error) {
+      // Handle errors related to the fetch operation itself
+      console.error("Fetch error:", error);
     }
   };
 
