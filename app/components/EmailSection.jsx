@@ -4,6 +4,9 @@ import GithubIcon from "../../public/github-icon.svg"
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import "animate.css/animate.min.css";
+import { FaCheckCircle } from "react-icons/fa";
+
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -65,12 +68,13 @@ const EmailSection = () => {
         </div>
       </div>
       <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email erfolgreich gesendet!
-          </p>
-        ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+      {emailSubmitted ? (
+    <div className="text-green-500 text-sm mt-2 flex items-center">
+      <FaCheckCircle className="mr-2 animate__animated animate__bounceIn" />
+      Nachricht erfolgreich versendet!
+    </div>
+  ) : (
+    <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
                 htmlFor="email"
