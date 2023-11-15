@@ -23,7 +23,7 @@ const headerStyle = {
 };
 
 const logoStyle = {
-  maxWidth: '100px',
+  maxWidth: '70px',
 };
 
 const contentStyle = {
@@ -56,8 +56,8 @@ export async function POST(req, res) {
             <img src="https://www.arlind-isa.de/images/logo.png" alt="AISoft" style={logoStyle} />
           </div>
           <div style={contentStyle}>
-            <p>Hallo {email},</p>
-            <p>Danke für deine Nachricht! Wir werden uns in Kürze mit Dir in Kontakt setzen.</p>
+            <p><strong>Hallo {email}</strong>,</p>
+            <br></br><p>Danke für deine Nachricht! Wir werden uns in Kürze mit Dir in Kontakt setzen.</p>
             <p>Neue Nachricht übermittelt:</p>
             <p>{message}</p>
           </div>
