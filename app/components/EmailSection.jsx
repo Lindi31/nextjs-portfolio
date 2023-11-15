@@ -70,7 +70,7 @@ const EmailSection = () => {
       <div>
       {emailSubmitted ? (
     <div className="text-green-500 text-sm mt-2 flex items-center">
-      <FaCheckCircle className="mr-2 animate__animated animate__bounceIn" />
+      <FaCheckCircle className="mr-2 text-lg animate__animated animate__bounceIn" />
       Nachricht erfolgreich versendet!
     </div>
   ) : (
