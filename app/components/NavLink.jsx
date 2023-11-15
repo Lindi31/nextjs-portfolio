@@ -12,7 +12,7 @@ const NavLink = ({ href, title }) => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
+ 
   return (
     // Der Link wird durch einen div ersetzt, um das Verhalten zu kontrollieren
     <div onClick={handleClick} className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:px-0 hover:text-white cursor-pointer">
