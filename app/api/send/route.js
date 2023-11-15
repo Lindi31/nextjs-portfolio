@@ -1,4 +1,4 @@
-// import { EmailTemplate } from '../../../components/EmailTemplate';
+
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -14,7 +14,7 @@ const containerStyle = {
 };
 
 const headerStyle = {
-  background: '#007BFF',
+  background: '#333333',
   color: '#fff',
   padding: '20px',
   textAlign: 'center',
@@ -53,7 +53,7 @@ export async function POST(req, res) {
         <>
         <div style={containerStyle}>
           <div style={headerStyle}>
-            <img src="/images/logo.png" alt="AISoft" style={logoStyle} />
+            <img src="https://www.arlind-isa.de/images/logo.png" alt="AISoft" style={logoStyle} />
           </div>
           <div style={contentStyle}>
             <p>Hallo {email},</p>
