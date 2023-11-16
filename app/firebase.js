@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
+import { getAnalytics, isSupported } from 'firebase/analytics';
 import { getAuth } from 'firebase/auth'; // Importieren Sie die Authentifizierungs-Funktionen
-
+import { useEffect } from 'react';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,7 +18,14 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+useEffect(() => {
+  isSupported().then((supported) => {
+    if (supported) {
+      // Initialisieren Sie Analytics hier, weil dies nur auf dem Client geschieht
+      getAnalytics(app);
+    }
+  });
+}, []);
 const auth = getAuth(app); // Initialisieren Sie die Authentifizierungsfunktionen
 
 export default app;
