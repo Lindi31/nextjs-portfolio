@@ -21,8 +21,8 @@ const achievementsList = [
     value: "0",
   },
   {
-    metric: "Awards",
-    value: "0",
+    metric: "Flutter Projekte",
+    value: "5",
   },
   {
     metric: "Jahre",
