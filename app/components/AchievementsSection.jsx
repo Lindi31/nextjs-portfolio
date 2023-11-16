@@ -60,7 +60,7 @@ const AchievementsSection = () => {
               )}
               {achievement.postfix}
             </h2>
-            <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+            <p className="text-[#ADB7BE] items-center justify-center text-base">{achievement.metric}</p>
           </div>
         ))}
       </div>
