@@ -106,15 +106,18 @@ const Navbar = () => {
         ))}
         {user ? (
               <li>
+                
                 <button
                   onClick={handleSignOut}
                   className="text-sm text-[#ADB7BE] sm:text-xl rounded md:px-0 hover:text-white cursor-pointer"
                 >Abmelden
-                </button>
+                </button><span className="text-sm text-gray-300 absolute right-3 py-1">
+              Eingeloggt als: {user.displayName || user.email} {/* Fallback auf die E-Mail, wenn kein displayName vorhanden ist */}
+            </span>
               </li>
             ) : (
               authLinks.map((link, index) => (
-                <li key={index}>
+                <li key={index}> 
                   <button
                     onClick={() => openDialog(link.dialog)}
                     className="text-sm text-[#ADB7BE] sm:text-xl rounded md:px-0 hover:text-white cursor-pointer"
