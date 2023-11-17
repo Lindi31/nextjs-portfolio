@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Dies ist die aktuelle Website, auf der du dich befindest. Sie wurde mit React.JS und Next.JS entwickelt. Diese Technologien ermöglichen es, eine hochmoderne und reaktionsschnelle Website zu erstellen. Darüber hinaus wurden verschiedene Animationsbibliotheken in die Website integriert, um visuelle Effekte und Benutzerinteraktionen zu verbessern. Dies trägt dazu bei, die Benutzererfahrung auf dieser Plattform zu optimieren und sie ansprechender zu gestalten.",
+    description: "Dies ist die aktuelle Website, auf der du dich befindest. Sie wurde mit React.JS/Next.JS sowie Firebase entwickelt. Diese Technologien ermöglichen es, eine hochmoderne und reaktionsschnelle Website zu erstellen. Darüber hinaus wurden verschiedene Animationsbibliotheken in die Website integriert, um visuelle Effekte und Benutzerinteraktionen zu verbessern. Dies trägt dazu bei, die Benutzererfahrung auf dieser Plattform zu optimieren und sie ansprechender zu gestalten.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
